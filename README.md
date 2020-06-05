@@ -30,13 +30,28 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain how to build stateful class components.
 
+To build stateful class components, you declare your class component by extending the React.Component parent class. Then you use the constructor function to set up some state and because you’re calling extends, you also need to call super(); otherwise you won’t have access the ‘this’ keyword. You then need to render some sort of UI to the DOM. You can do this by calling the life-cycle method render().
+
+
 2. Describe the different phases of the component lifecycle.
+
+The three phases of the component lifecycle are the Mounting/birth phase, Updating/growth phase, and the Unmounting/death phase.
+
 
 3. Demonstrate an understanding of class component lifecycle methods.
 
+In the mounting phase, the constructor function is used to serve up initial state data for when you mount up DOM elements. The render() method is a method used to tell React to return some piece of DOM which will then be mounted by the React virtual DOM. Any changes from setState or passing in new props invoke a call to the render() method as part of the Updating phase. In the Unmounting phase is where you would clean up your event listeners and any other side effects as you unmount a component.
+
+
 4. Define stateful logic.
 
+Stateful logic is logic that is built into a component. It can be a function that handles a click event or maybe a function that sets toggle state, or even a function that formats data before it gets displayed. Usually, this kind of logic deals with state in the component.
+
+
 5. Describe how to test a React component with React Testing Library.
+
+The react-testing-library is designed with the user in mind, testing components via DOM nodes, similar to how a user would interact with the front end of a website. Using the ‘AAA’ framework (arrange, act, assert), step 1 is to set up our code such that it can be tested. Step 2 is calling a method or function that returns a result of interest to our test. Finally, with that return, we assert if our expected return matched the actual return.
+
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
